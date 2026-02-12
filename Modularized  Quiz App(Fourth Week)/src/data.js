@@ -1,0 +1,22 @@
+export const questions = [
+  { q: "Time complexity of binary search?", o: ["O(n)", "O(log n)", "O(n log n)", "O(1)"], a: 1 },
+  { q: "Which data structure follows FIFO?", o: ["Stack", "Queue", "Heap", "Tree"], a: 1 },
+  { q: "Inorder traversal of BST results in?", o: ["Random", "Reverse", "Sorted", "Level"], a: 2 },
+  { q: "Which structure enables recursion?", o: ["Queue", "Stack", "Heap", "Graph"], a: 1 },
+  { q: "Which algorithm uses a priority queue?", o: ["DFS", "BFS", "Dijkstra", "Binary Search"], a: 2 },
+  { q: "Which sorting algorithm is stable?", o: ["Quick", "Heap", "Merge", "Selection"], a: 2 },
+  { q: "DFS internally relies on?", o: ["Queue", "Stack", "Heap", "Map"], a: 1 },
+  { q: "Average time complexity of hashing?", o: ["O(1)", "O(n)", "O(log n)", "O(n log n)"], a: 0 },
+  { q: "Which structure supports undo operations?", o: ["Queue", "Stack", "Tree", "Graph"], a: 1 },
+  { q: "Shortest path algorithm?", o: ["DFS", "BFS", "Dijkstra", "Binary Search"], a: 2 },
+  { q: "Merge sort time complexity?", o: ["O(n)", "O(log n)", "O(n log n)", "O(n^2)"], a: 2 },
+  { q: "Traversal using queue?", o: ["Inorder", "Preorder", "Postorder", "Level"], a: 3 },
+  { q: "Worst case search in BST?", o: ["O(log n)", "O(n)", "O(1)", "O(n log n)"], a: 1 },
+  { q: "Two pointers technique applies to?", o: ["DP", "Greedy", "Arrays", "Graphs"], a: 2 },
+  { q: "Cycle detection uses?", o: ["DFS", "Binary Search", "Sorting", "Greedy"], a: 0 },
+  { q: "Non-linear data structure?", o: ["Array", "Stack", "Queue", "Graph"], a: 3 },
+  { q: "LIFO principle belongs to?", o: ["Queue", "Stack", "Heap", "Map"], a: 1 },
+  { q: "BFS uses?", o: ["Stack", "Queue", "Heap", "Set"], a: 1 },
+  { q: "Improves brute force?", o: ["Recursion", "Optimization", "Backtracking", "DFS"], a: 1 },
+  { q: "Key-value storage structure?", o: ["Array", "Stack", "HashMap", "Queue"], a: 2 }
+];
