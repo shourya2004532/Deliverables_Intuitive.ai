@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="index.css">
+
+    <title>TechStack - Technical Learning Platform</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+      <a href="#" class="logo-text text--white"><span class="logo-icon">⚡</span> TechStack</a>
+       <a href="#courses" class="btn--blue-gradient text--white text--medium">Enroll Now</a>
+      </nav>
+      <div class="header-container">
+        <div class="header-container__text">
+          <h1 class="title--1 text--white">Master cutting-edge technologies</h1>
+          <p class="text--grey text--medium">Industry-leading courses in cloud computing, AI, DevOps, and full-stack development. Accelerate your tech career with hands-on projects and real-world applications.</p>
+          <a href="#courses" class="btn--pink-gradient text--white text--medium scroll-btn">Start Learning</a>
+        </div>
+        <div class="hero-img-container">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="assets/image-hero-desktop@2x.webp">
+            <source media="(min-width: 768px)" srcset="assets/image-hero-tablet@2x.webp">
+            <img
+              class="hero-img"
+              src="assets/image-hero-mobile@2x.webp"
+              alt="A dark-haired woman holding a cup and blowing at it on a pink background with two info bubbles displaying amount of members at 29k and 1,451 course hours">
+          </picture>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <section class="main-content" id="courses">
+          <article class="card card--title">
+            <h2 class="title--2 text--bold text--white">Featured Technical Courses</h2>
+          </article>
+  
+          <article class="card">
+            <svg class="icon" width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Full-stack development icon">
+              <title>Full-stack development</title>
+              <rect x="2" y="3" width="20" height="12" rx="1.5" fill="#E6F8FF" stroke="#0F172A" stroke-width="0.8"/>
+              <rect x="3" y="16" width="18" height="2" rx="1" fill="#0F172A"/>
+              <path d="M7 7h10" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+              <path d="M7 10h10" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+            <h3 class="title--3 text--extra-bold text--dark">Full-Stack Web Development</h3>
+            <p class="card__text text--grey text--medium">Master React, Node.js, and PostgreSQL. Build scalable web applications from frontend to backend with modern frameworks and best practices.</p>
+            <a class="card__link btn--blue-gradient text--white text--bold" href="#">Enroll Now</a>
+          </article>
+  
+          <article class="card">
+            <svg class="icon" width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cloud architecture icon">
+              <title>Cloud architecture</title>
+              <path d="M20 16.5H7.5a3.5 3.5 0 010-7c.3 0 .6.02.9.07A4.5 4.5 0 0117 6.5c2.2 0 3.9 1.7 3.9 3.9 0 1.9-1.4 3.2-1.9 3.9z" fill="#E6F8FF" stroke="#0F172A" stroke-width="0.8"/>
+            </svg>
+            <h3 class="title--3 text--extra-bold text--dark">Cloud Architecture (AWS)</h3>
+            <p class="card__text text--grey text--medium">Learn AWS services, infrastructure design, and deployment strategies. Prepare for AWS Solutions Architect certification with hands-on labs.</p>
+            <a class="card__link btn--blue-gradient text--white text--bold" href="#">Enroll Now</a>
+          </article>
+  
+          <article class="card">
+            <svg class="icon" width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Machine learning and AI icon">
+              <title>Machine learning and AI</title>
+              <circle cx="12" cy="7" r="3" fill="#EDE7FF" stroke="#0F172A" stroke-width="0.8"/>
+              <path d="M12 10v3" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="12" cy="17" r="1" fill="#0F172A"/>
+              <path d="M8 11l-2 2" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+              <path d="M16 11l2 2" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+            <h3 class="title--3 text--extra-bold text--dark">Machine Learning & AI</h3>
+            <p class="card__text text--grey text--medium">Explore neural networks, deep learning, and NLP. Build intelligent systems using TensorFlow and PyTorch with real datasets.</p>
+            <a class="card__link btn--blue-gradient text--white text--bold" href="#">Enroll Now</a>
+          </article>
+  
+          <article class="card">
+            <svg class="icon" width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DevOps and Kubernetes icon">
+              <title>DevOps and Kubernetes</title>
+              <rect x="3" y="6" width="18" height="10" rx="2" fill="#E6FFF4" stroke="#0F172A" stroke-width="0.8"/>
+              <path d="M7 10h10" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="18" cy="8" r="1" fill="#0F172A"/>
+            </svg>
+            <h3 class="title--3 text--extra-bold text--dark">DevOps & Kubernetes</h3>
+            <p class="card__text text--grey text--medium">Master containerization, CI/CD pipelines, and orchestration. Deploy and manage applications at scale with Docker and Kubernetes.</p>
+            <a class="card__link btn--blue-gradient text--white text--bold" href="#">Enroll Now</a>
+          </article>
+  
+          <article class="card">
+            <svg class="icon" width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cybersecurity icon">
+              <title>Cybersecurity</title>
+              <path d="M12 3l7 4v5c0 5-3.6 8.6-7 9-3.4-.4-7-4-7-9V7l7-4z" fill="#FFECEC" stroke="#0F172A" stroke-width="0.8"/>
+              <rect x="9" y="10" width="6" height="4" rx="1" fill="#0F172A"/>
+              <path d="M11 10V9a1 1 0 112 0v1" stroke="#EDEDED" stroke-width="0.8" stroke-linecap="round"/>
+            </svg>
+            <h3 class="title--3 text--extra-bold text--dark">Cybersecurity Fundamentals</h3>
+            <p class="card__text text--grey text--medium">Learn network security, ethical hacking, and threat analysis. Build a foundation in security principles and compliance frameworks.</p>
+            <a class="card__link btn--blue-gradient text--white text--bold" href="#">Enroll Now</a>
+          </article>
+
+          <article class="card">
+            <svg class="icon" width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Algorithms icon">
+              <title>Algorithms</title>
+              <circle cx="6" cy="7" r="1.5" fill="#E6F0FF" stroke="#0F172A" stroke-width="0.8"/>
+              <circle cx="12" cy="12" r="1.5" fill="#E6F0FF" stroke="#0F172A" stroke-width="0.8"/>
+              <circle cx="18" cy="17" r="1.5" fill="#E6F0FF" stroke="#0F172A" stroke-width="0.8"/>
+              <path d="M7 8.2L11 11" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+              <path d="M13 12.5L17 16" stroke="#0F172A" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+            <h3 class="title--3 text--extra-bold text--dark">Data Structures & Algorithms</h3>
+            <p class="card__text text--grey text--medium">Master arrays, linked lists, trees, graphs, and sorting algorithms. Ace coding interviews and solve complex computational problems efficiently.</p>
+            <a class="card__link btn--blue-gradient text--white text--bold" href="#">Enroll Now</a>
+          </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <a href="#" class="logo-text text--white"><span class="logo-icon">⚡</span> TechStack</a>
+        <a class="btn--blue-gradient text--white text--medium" href="#courses">Start Your Journey Now!!</a>
+      </div>
+
+      <div class="footer__contact">
+        <h4 class="text--white text--bold">Contact</h4>
+        <address class="text--grey" aria-label="Company contact information">
+          <div>Phone: <a href="tel:+1234567890" class="text--white">+91-9024751987</a></div>
+          <div>Email: <a href="mailto:hello@techstack.example" class="text--white">shouryanahar9@gmail.com</a></div>
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>
