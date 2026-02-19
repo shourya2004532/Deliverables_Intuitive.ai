@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <h1 class="hero__title">Weather App</h1>
+        <p class="hero__subtitle">Simple city search with live weather.</p>
+      </header>
+
+      <main class="card">
+        <form class="search" id="weather-form" autocomplete="off">
+          <label class="search__label" for="city-input">City</label>
+          <div class="search__controls">
+            <input
+              id="city-input"
+              name="city"
+              type="text"
+              placeholder="Try: Udaipur, Hyderabad, New York..."
+              required
+            />
+            <button type="submit" class="primary-btn">Get Weather</button>
+            <div class="unit-toggle" role="group" aria-label="Temperature unit">
+              <button type="button" class="unit-toggle__btn is-active" data-unit="c" aria-pressed="true">
+                °C
+              </button>
+              <button type="button" class="unit-toggle__btn" data-unit="f" aria-pressed="false">
+                °F
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <section class="result" id="result" hidden="true">
+          <div>
+            <p class="result__location" id="location"></p>
+            <p class="result__description" id="description"></p>
+          </div>
+          <div class="result__stats">
+            <div>
+              <p class="result__value" id="temperature"></p>
+              <p class="result__label">Temp</p>
+            </div>
+            <div>
+              <p class="result__value" id="feels-like"></p>
+              <p class="result__label">Feels Like</p>
+            </div>
+            <div>
+              <p class="result__value" id="humidity"></p>
+              <p class="result__label">Humidity</p>
+            </div>
+            <div>
+              <p class="result__value" id="wind"></p>
+              <p class="result__label">Wind</p>
+            </div>
+          </div>
+         
+          <div class="result__meta" id="updated"></div>
+        </section>
+      </main>
+    </div>
+    <div class = "main-error">
+ <div class="error" id="error" hidden>
+            <p>No matching city found. Try adding a country code.</p>
+          </div>
+          </div>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
