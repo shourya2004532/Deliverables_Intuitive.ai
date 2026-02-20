@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div class="brand">
+          <div>
+            <h1>Movie Culture</h1>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <div class="search">
+          <label for="query">Search movies</label>
+          <input id="query" type="text" placeholder="Try: Shutter Island, Dune etc..." />
+          <div id="recent" class="recent"></div>
+        </div>
+
+        <div class="filters">
+          <div>
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+          </select>
+          </div>
+          <div>
+            <label for="year">Year</label>
+            <input id="year" type="number" min="1900" max="2099" placeholder="Any" />
+          </div>
+          <div>
+            <label for="pageSize">Results/Page</label>
+            <select id="pageSize">
+              <option value="10">10</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="status">
+        <div id="message" class="message"></div>
+        <div id="stats" class="stats"></div>
+      </section>
+
+      <section class="grid" id="results"></section>
+
+      <section class="pagination">
+        <button id="prev" class="btn btn--ghost" disabled>Prev</button>
+        <div id="pages" class="pages"></div>
+        <button id="next" class="btn btn--ghost" disabled>Next</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Powered by OMDb</span>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
