@@ -7,15 +7,6 @@ const FILTERS = new Map([
 ]);
 const FILTER_SET = new Set(FILTER_KEYS);
 
-const nowIso = () => new Date().toISOString();
-
-const makeId = () => {
-  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
-    return crypto.randomUUID();
-  }
-  return `task-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-};
-
 const normalizeTasks = (tasks) => (Array.isArray(tasks) ? [...tasks] : []);
 
 const createState = (tasks, filter) => ({
@@ -29,18 +20,16 @@ const addTask = (tasks, text) => {
     return [...tasks];
   }
   const nextTask = {
-    id: makeId(),
     text: trimmed,
     completed: false,
-    createdAt: nowIso(),
   };
   return [...tasks, nextTask];
 };
+// ...tasks spans all properties .
+const toggleTask = (tasks, index) =>
+  tasks.map((task, i) => (i === index ? { ...task, completed: !task.completed } : task));
 
-const toggleTask = (tasks, id) =>
-  tasks.map((task) => (task.id === id ? { ...task, completed: !task.completed } : task));
-
-const removeTask = (tasks, id) => tasks.filter((task) => task.id !== id);
+const removeTask = (tasks, index) => tasks.filter((_, i) => i !== index);
 
 const removeCompleted = (tasks) => tasks.filter((task) => !task.completed);
 
@@ -55,9 +44,8 @@ const applyFilter = (tasks, filter) => {
   const resolver = FILTERS.get(filter) || FILTERS.get(DEFAULT_FILTER);
   return resolver(tasks);
 };
-
-const toTaskMap = (tasks) => new Map(tasks.map((task) => [task.id, task]));
-
+// .reduce has 2 attr first is accumulator and the second is the current value. 
+// .reduce( (acc,curr)=>{},intial value);
 const buildSummary = (tasks) =>
   tasks.reduce(
     (map, task) => {
@@ -88,5 +76,4 @@ export {
   setFilter,
   applyFilter,
   summaryMap,
-  toTaskMap,
 };

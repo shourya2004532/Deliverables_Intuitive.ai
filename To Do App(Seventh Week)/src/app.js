@@ -21,10 +21,6 @@ const elements = {
   clear: document.querySelector('[data-clear-completed]'),
 };
 
-if (!elements.form || !elements.input || !elements.list || !elements.filters) {
-  throw new Error('Todo shell missing expected DOM structure');
-}
-
 let appState = createState([], DEFAULT_FILTER);
 const persisted = restoreState();
 if (persisted && Array.isArray(persisted.tasks)) {
@@ -55,10 +51,16 @@ const renderList = () => {
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
     checkbox.addEventListener('change', () => {
-      dispatch((current) => ({
-        ...current,
-        tasks: toggleTask(current.tasks, task.id),
-      }));
+      dispatch((current) => {
+        const index = current.tasks.indexOf(task);
+        if (index === -1) {
+          return current;
+        }
+        return {
+          ...current,
+          tasks: toggleTask(current.tasks, index),
+        };
+      });
     });
 
     const span = document.createElement('span');
@@ -73,10 +75,17 @@ const renderList = () => {
     deleteButton.type = 'button';
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', () => {
-      dispatch((current) => ({
-        ...current,
-        tasks: removeTask(current.tasks, task.id),
-      }));
+      // parameter of dispatch is update function that gets appstate as parameter.
+      dispatch((current) => {
+        const index = current.tasks.indexOf(task);
+        if (index === -1) {
+          return current;
+        }
+        return {
+          ...current,
+          tasks: removeTask(current.tasks, index),
+        };
+      });
     });
 
     item.append(label, deleteButton);
@@ -100,7 +109,9 @@ const render = () => {
 const dispatch = (updater) => {
   appState = updater(appState);
   persistState(appState);
+  setTimeout(() => {
   render();
+  },250);
 };
 
 elements.form.addEventListener('submit', (event) => {
